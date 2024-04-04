@@ -97,7 +97,7 @@ CREATE VIEW S AS (
         FROM
           S_p
         WHERE
-          S_m.time = T.time))
+          S_p.time = T.time))
   UNION (
     SELECT
       *
@@ -254,17 +254,6 @@ BEGIN
         time = OLD.time
       LIMIT 1)) THEN
       DELETE FROM S_p
-      WHERE time = OLD.time;
-    END IF;
-    IF(EXISTS(
-      SELECT
-        1
-      FROM
-        R_m
-      WHERE
-        time = OLD.time
-      LIMIT 1)) THEN
-      DELETE FROM R_m
       WHERE time = OLD.time;
     END IF;
     IF(NOT EXISTS(

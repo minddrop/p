@@ -1,6 +1,6 @@
 -- CREATE TABLE A (time, a_attributes)
 CREATE TABLE A_d(
-  time AS timestamptz NOT NULL,
+  time timestamptz NOT NULL,
   a_attributes
 );
 

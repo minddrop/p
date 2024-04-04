@@ -1,4 +1,4 @@
--- ALTER TABLE A DROP COLUMN a a_type;
+-- ALTER TABLE A DROP COLUMN a;
 CREATE VIEW A_i AS
 SELECT
   a_attributes -- except a
